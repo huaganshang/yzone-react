@@ -1,0 +1,63 @@
+{
+  "name": "workbench",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist ./node_modules && npm i",
+    "dev": "cross-env NODE_ENV=development node ./webpack/dev.js",
+    "test-build": "npm run clean && cross-env NODE_ENV=test webpack -p --config ./webpack/test.js",
+    "prev-build": "npm run clean && cross-env NODE_ENV=preview webpack -p --config ./webpack/preview.js",
+    "prod-build": "npm run clean && cross-env NODE_ENV=production webpack -p --config ./webpack/production.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "android >= 4.3",
+    "ios >= 8",
+    "not ie <= 11"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.5.5",
+    "@babel/runtime-corejs2": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "^1.12.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "happypack": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-px2rem-exclude": "0.0.6",
+    "react-router-config": "^5.0.1",
+    "style-resources-loader": "^1.2.1",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1",
+    "webpack-parallel-uglify-plugin": "^1.1.2"
+  },
+  "dependencies": {
+    "antd-mobile": "^2.2.14",
+    "axios": "^0.19.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "url-search-params": "^1.1.0"
+  }
+}
